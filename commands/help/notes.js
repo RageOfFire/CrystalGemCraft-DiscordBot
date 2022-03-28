@@ -8,7 +8,7 @@ module.exports = {
 	run: async ({ client, message, args }) => {
 		const notesEmbed = new MessageEmbed()
 			.setColor('#faa152')
-			.setTitle('Hướng dẫn đổi skin')
+			.setTitle('Hướng dẫn sử dụng banknotes')
 			.setURL('http://www.ragefiresmp.ga/')
 			.setAuthor({ name: 'RageFireSMP', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'http://www.ragefiresmp.ga/' })
 			.setDescription(`💵 /withdraw ($) : Rút ra 1 số tiền nhất định\n💵 /deposit hoặc ấn chuột phải : Phải có 1 banknotes trên tay chuyển tiền vào trong tài khoản`)

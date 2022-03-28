@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 const { hyperlink } = require('@discordjs/builders');
 module.exports = {
 	name: "help",
-	category: "help",
+	category: "info",
 	permissions: [],
 	devOnly: false,
 	run: async ({ client, message, args }) => {
