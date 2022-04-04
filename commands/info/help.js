@@ -11,7 +11,17 @@ module.exports = {
 			.setTitle('Hướng dẫn')
 			.setURL('http://www.ragefiresmp.ga/')
 			.setAuthor({ name: 'RageFireSMP', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'http://www.ragefiresmp.ga/' })
-			.setDescription(`🔶Tất cả lệnh đều bắt đầu = (r-)\n🔶 towny : Xem các lệnh cơ bản của Towny\n🔶 shop : Xem các lệnh cơ bản của Shop\n🔶 lock : Xem các lệnh cơ bản của LWC (Khóa rương)\n🔶 rtp : Xem các lệnh cơ bản của rtp (random tp)\n🔶 notes : Xem các lệnh cơ bản của banknotes\n🔶 skin : Xem các lệnh cơ bản của đổi skin\n🔶 map : Xem bản đồ thế giới\n🔶 howhandsome : Xem tỷ lệ đẹp trai của bạn :v\n🔶 howgay : Xem tỷ lệ gay của bạn\n🔶 number : Nhận 1 số ngẫu nhiên từ 1-100`)
+			.setDescription(`
+			🔶Tất cả lệnh đều bắt đầu = (r-)
+			\n🔶 towny : Xem các lệnh cơ bản của Towny
+			\n🔶 shop : Xem các lệnh cơ bản của Shop
+			\n🔶 lock : Xem các lệnh cơ bản của LWC (Khóa rương)
+			\n🔶 rtp : Xem các lệnh cơ bản của rtp (random tp)
+			\n🔶 skin : Xem các lệnh cơ bản của đổi skin
+			\n🔶 map : Xem bản đồ thế giới
+			\n🔶 howhandsome : Xem tỷ lệ đẹp trai của bạn :v
+			\n🔶 howgay : Xem tỷ lệ gay của bạn
+			\n🔶 number : Nhận 1 số ngẫu nhiên từ 1-100`)
 			.setThumbnail('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
 			.addFields(
 				{ name: 'Tham gia trên Java', value: hyperlink('mc.ragefiresmp.ga','http://www.ragefiresmp.ga/'), inline: true },
