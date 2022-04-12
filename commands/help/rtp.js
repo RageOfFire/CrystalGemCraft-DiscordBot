@@ -18,7 +18,10 @@ module.exports = {
 			\n🔮 /sethome "Tên" : Tạo home để có thể di chuyển về đó mọi lúc mọi nơi bằng lệnh /home "tên" và xóa đi bất kỳ lúc nào với /delhome "Tên"
 			\n🔮 /warps : Hiển thị các khu khả dụng trong server
 			\n🔮 /tpa "Tên người chơi" : Gửi 1 yêu cầu dịch chuyển tới người chơi đó
-			\n🔮 /tpahere "Tên người chơi" : Gửi 1 yêu cầu người chơi đó dịch chuyển tới bản thân bạn`)
+			\n🔮 /tpahere "Tên người chơi" : Gửi 1 yêu cầu người chơi đó dịch chuyển tới bản thân bạn
+			\n🔮 /rw tp : Dịch chuyển ngẫu nhiên tới thế giới vô hạn tài nguyên
+			\n🔮 /rw tp nether : Dịch chuyển ngẫu nhiên tới thế giới nether vô hạn tài nguyên
+			\n🔮 /rw tp end : Dịch chuyển ngẫu nhiên tới thế giới the end vô hạn tài nguyên`)
 			.setThumbnail('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
 			.addFields(
 				{ name: 'Tham gia trên Java', value: hyperlink('mc.ragefiresmp.ga','http://www.ragefiresmp.ga/'), inline: true },
