@@ -11,8 +11,8 @@ const client = new Discord.Client({
 
 let bot = {
     client,
-    prefix: "r-",
-    owner: [process.env.OWNER]
+    prefix: process.env.PREFIX,
+    owner: ['279932957769072641']
 }
 
 client.commands = new Discord.Collection()

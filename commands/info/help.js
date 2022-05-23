@@ -6,12 +6,20 @@ module.exports = {
 	permissions: [],
 	devOnly: false,
 	run: async ({ client, message, args }) => {
+		let HelpCMD = 'Tất cả lệnh đều bắt đầu = ' + prefix + '\n\n';
+		fs.readdirSync('./commands/').forEach((category) => {
+			let commands = getFiles(`./commands/${category}`, ".js")
+			commands.forEach((f) => {
+				const command = require(`../${category}/${f}`)
+				HelpCMD += `🔶${prefix}${command.name}: ${command.description}\n\n`
+			})
+		})
 		const helpEmbed = new MessageEmbed()
 			.setColor('#faa152')
 			.setTitle('Hướng dẫn')
 			.setURL('http://www.ragefiresmp.ga/')
 			.setAuthor({ name: 'RageFireSMP', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'http://www.ragefiresmp.ga/' })
-			.setDescription(`🔶Tất cả lệnh đều bắt đầu = (r-)\n🔶 towny : Xem các lệnh cơ bản của Towny\n🔶 shop : Xem các lệnh cơ bản của Shop\n🔶 lock : Xem các lệnh cơ bản của LWC (Khóa rương)\n🔶 rtp : Xem các lệnh cơ bản của rtp (random tp)\n🔶 skin : Xem các lệnh cơ bản của đổi skin\n🔶 market : Xem các lệnh cơ bản của chợ đen\n🔶 howhandsome : Xem tỷ lệ đẹp trai của bạn :v\n🔶 howgay : Xem tỷ lệ gay của bạn\n🔶 number : Nhận 1 số ngẫu nhiên từ 1-100`)
+			.setDescription(HelpCMD)
 			.setThumbnail('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
 			.addFields(
 				{ name: 'Tham gia trên Java', value: hyperlink('mc.ragefiresmp.ga','http://www.ragefiresmp.ga/'), inline: true },
