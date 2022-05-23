@@ -35,6 +35,7 @@ npm i
 
 ```sh
 TOKEN=TOKEN của bạn
+PREFIX=phần bắt đầu để chạy từng câu lệnh
 ```
 
 * Chạy chương trình
