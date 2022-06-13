@@ -31,6 +31,6 @@ module.exports = {
 			.setImage('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
 			.setTimestamp()
 			.setFooter({ text: 'RageFireSMP', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160' });
-		message.reply({ embeds: [helpEmbed] })
+		message.reply({ embeds: [helpEmbed] }).catch((err) => {console.log(err)})
 	}
 }
