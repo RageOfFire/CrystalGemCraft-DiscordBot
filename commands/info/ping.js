@@ -1,6 +1,7 @@
 module.exports = {
     name: "ping",
     category: "info",
+    description: 'Kiểm tra xem bot còn hoạt động không ?',
     permissions: [],
     devOnly: false,
     run: async({ client, message, args }) => {

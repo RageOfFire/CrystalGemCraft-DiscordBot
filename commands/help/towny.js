@@ -3,6 +3,7 @@ const { hyperlink } = require('@discordjs/builders');
 module.exports = {
 	name: "towny",
 	category: "help",
+	description: 'Xem hướng dẫn các lệnh của Towny',
 	permissions: [],
 	devOnly: false,
 	run: async ({ client, message, args }) => {

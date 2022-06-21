@@ -3,6 +3,7 @@ const { hyperlink } = require('@discordjs/builders');
 module.exports = {
 	name: "rtp",
 	category: "help",
+	description: 'Xem hướng dẫn các lệnh di chuyển',
 	permissions: [],
 	devOnly: false,
 	run: async ({ client, message, args }) => {

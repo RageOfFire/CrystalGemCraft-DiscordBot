@@ -1,6 +1,7 @@
 module.exports = {
     name: "howgay",
     category: "fun",
+    description: 'Xem độ gay của bạn :))) ?',
     permissions: [],
     devOnly: false,
     run: async({ client, message, args }) => {

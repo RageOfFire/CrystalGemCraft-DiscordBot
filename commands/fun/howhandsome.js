@@ -1,6 +1,7 @@
 module.exports = {
     name: "howhandsome",
     category: "fun",
+    description: 'Xem độ đẹp trai của bạn :v',
     permissions: [],
     devOnly: false,
     run: async({ client, message, args }) => {

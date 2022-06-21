@@ -3,6 +3,7 @@ const { hyperlink } = require('@discordjs/builders');
 module.exports = {
 	name: "skin",
 	category: "help",
+	description: 'Xem hướng dẫn các lệnh đổi skin',
 	permissions: [],
 	devOnly: false,
 	run: async ({ client, message, args }) => {

@@ -3,6 +3,7 @@ const { hyperlink } = require('@discordjs/builders');
 module.exports = {
 	name: "lock",
 	category: "help",
+	description: 'Xem hướng dẫn các lệnh khóa khối',
 	permissions: [],
 	devOnly: false,
 	run: async ({ client, message, args }) => {
