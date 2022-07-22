@@ -4,8 +4,8 @@ const run = async (client, interaction) => {
 	const townyEmbed = new MessageEmbed()
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn Towny')
-		.setURL('http://www.ragefiresmp.ga/')
-		.setAuthor({ name: 'RageFireSMP', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'http://www.ragefiresmp.ga/' })
+		.setURL('https://www.crystalgemcraft.xyz/')
+		.setAuthor({ name: 'CrystalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'https://www.crystalgemcraft.xyz/' })
 		.setDescription(`🏰Có thể thay thế /town = /t
 		🏰 /town new "tên town" : Tạo town của riêng bạn (thay thế "tên town" thành tên bạn muốn)
 		🏰 /town here : Hiển thị thông tin về town mà nơi bạn đang đứng
@@ -37,12 +37,12 @@ const run = async (client, interaction) => {
 		🏰Thêm thông tin tại: ${hyperlink('Thông tin','https://github.com/TownyAdvanced/Towny/wiki/Towny-Commands')}`)
 		.setThumbnail('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
 		.addFields(
-			{ name: 'Tham gia trên Java', value: hyperlink('mc.ragefiresmp.ga','http://www.ragefiresmp.ga/'), inline: true },
-			{ name: 'Tham gia trên bedrock', value: hyperlink('mc.ragefiresmp.ga:19132','http://www.ragefiresmp.ga/'), inline: true },
+			{ name: 'Tham gia trên Java', value: hyperlink('mc.crystalgemcraft.xyz','https://www.crystalgemcraft.xyz/'), inline: true },
+			{ name: 'Tham gia trên bedrock', value: hyperlink('mc.crystalgemcraft.xyz:19132','https://www.crystalgemcraft.xyz/'), inline: true },
 		)
 		.setImage('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
 		.setTimestamp()
-		.setFooter({ text: 'RageFireSMP', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160' });
+		.setFooter({ text: 'CrystalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160' });
 	interaction.reply({ embeds: [townyEmbed] }).catch((err) => {console.log(err)})
 }
 module.exports = {

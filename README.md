@@ -1,14 +1,14 @@
-# RageFireSMP-DiscordBot
+# CrystalGemCraft-DiscordBot
 
-![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/RageFireSMP-DiscordBot)
+![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/CrystalGemCraft-DiscordBot)
 ![Discord](https://img.shields.io/discord/752171524919918672)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/RageOfFire/RageFireSMP-DiscordBot)
-![GitHub last commit](https://img.shields.io/github/last-commit/RageOfFire/RageFireSMP-DiscordBot)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/RageOfFire/RageFireSMP-DiscordBot)
-![GitHub repo size](https://img.shields.io/github/repo-size/RageOfFire/RageFireSMP-DiscordBot)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/RageOfFire/CrystalGemCraft-DiscordBot)
+![GitHub last commit](https://img.shields.io/github/last-commit/RageOfFire/CrystalGemCraft-DiscordBot)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/RageOfFire/CrystalGemCraft-DiscordBot)
+![GitHub repo size](https://img.shields.io/github/repo-size/RageOfFire/CrystalGemCraft-DiscordBot)
 ![GitHub followers](https://img.shields.io/github/followers/RageOfFire)
-![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/RageFireSMP-DiscordBot)
-![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/RageOfFire/RageFireSMP-DiscordBot)
+![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/CrystalGemCraft-DiscordBot)
+![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/RageOfFire/CrystalGemCraft-DiscordBot)
 
 ## Mô tả
 
@@ -20,6 +20,7 @@
 
 * [Discord.js](https://discord.js.org/#/).
 * [DotENV](https://www.npmjs.com/package/dotenv).
+* [AntiSpam](https://www.npmjs.com/package/discord-anti-spam).
 
 ### Cài đặt
 
@@ -46,8 +47,8 @@ npm start
 
 ## Hỗ trợ
 
-![GitHub issues](https://img.shields.io/github/issues/RageOfFire/RageFireSMP-DiscordBot)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/RageOfFire/RageFireSMP-DiscordBot)
+![GitHub issues](https://img.shields.io/github/issues/RageOfFire/CrystalGemCraft-DiscordBot)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/RageOfFire/CrystalGemCraft-DiscordBot)
 
 ## Tác giả
 
@@ -55,4 +56,4 @@ npm start
 
 ## License
 
-![GitHub](https://img.shields.io/github/license/RageOfFire/RageFireSMP-DiscordBot)
+![GitHub](https://img.shields.io/github/license/RageOfFire/CrystalGemCraft-DiscordBot)
