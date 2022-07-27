@@ -33,6 +33,8 @@ const run = async (client, interaction) => {
 		🏰 /towny top "?" : Xem xếp hạng town
 		🏰 /towny prices : Xem tiền town
 
+		🏰 Lưu ý: Khi xóa town (t delete, t unclaim, ...) Hãy đảm bảo bạn đã lấy hết những gì cần thiết trước 
+		khi rời town rồi vì khi xóa sẽ làm mới khu vực đó về trạng thái cũ.
 
 		🏰Thêm thông tin tại: ${hyperlink('Thông tin','https://github.com/TownyAdvanced/Towny/wiki/Towny-Commands')}`)
 		.setThumbnail('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
