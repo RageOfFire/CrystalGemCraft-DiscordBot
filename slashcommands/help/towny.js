@@ -6,7 +6,8 @@ const run = async (client, interaction) => {
 		.setTitle('Hướng dẫn Towny')
 		.setURL('https://www.crystalgemcraft.xyz/')
 		.setAuthor({ name: 'CrystalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'https://www.crystalgemcraft.xyz/' })
-		.setDescription(`🏰Có thể thay thế /town = /t
+		.setDescription(`
+		🏰 Có thể thay thế /town = /t
 		🏰 /town new "tên town" : Tạo town của riêng bạn (thay thế "tên town" thành tên bạn muốn)
 		🏰 /town here : Hiển thị thông tin về town mà nơi bạn đang đứng
 		🏰 /town list : Thông tin về các town khác🏰 /town online : Hiển thị những ai đang online ở town nào
@@ -35,6 +36,8 @@ const run = async (client, interaction) => {
 
 		🏰 Lưu ý: Khi xóa town (t delete, t unclaim, ...) Hãy đảm bảo bạn đã lấy hết những gì cần thiết trước 
 		khi rời town rồi vì khi xóa sẽ làm mới khu vực đó về trạng thái cũ.
+
+		🏰 HOT: /tm : Để sử dụng gui cho town
 
 		🏰Thêm thông tin tại: ${hyperlink('Thông tin','https://github.com/TownyAdvanced/Towny/wiki/Towny-Commands')}`)
 		.setThumbnail('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')

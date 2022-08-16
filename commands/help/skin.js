@@ -12,7 +12,8 @@ module.exports = {
 		.setTitle('Hướng dẫn đổi skin')
 		.setURL('https://www.crystalgemcraft.xyz/')
 		.setAuthor({ name: 'CrystalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'https://www.crystalgemcraft.xyz/' })
-		.setDescription(`🎨 /skin "Tên skin" : Đổi skin của bản thân bằng với "Tên skin"
+		.setDescription(`
+		🎨 /skin "Tên skin" : Đổi skin của bản thân bằng với "Tên skin"
 		🎨 /skin url "Link" : Đổi skin của bản thân bằng với "Link" của skin đó
 		🎨 /skin clear : Xóa skin của bản thân
 		🎨 /skins : Mở 1 gui gồm nhiều skin để bạn chọn

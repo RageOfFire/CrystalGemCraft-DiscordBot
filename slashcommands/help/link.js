@@ -6,7 +6,8 @@ const run = async (client, interaction) => {
 	.setTitle('Hướng dẫn Link discord')
 	.setURL('https://www.crystalgemcraft.xyz/')
 	.setAuthor({ name: 'CrytalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'https://www.crystalgemcraft.xyz/' })
-	.setDescription(`Để link với discord nhận free rank vip, king:
+	.setDescription(`
+	Để link với discord nhận free rank vip, king:
 	🔗Bước 1: vào server nhập /discord link🔗
 	🔗Bước 2: Mang mã số nhận được từ /discord link nhắn tin riêng cho con bot này🔗
 	🔗Bước 3: Giờ discord của bạn đã được liên kết, bạn có thế nhận được rank vip và king miễn phí🔗`)

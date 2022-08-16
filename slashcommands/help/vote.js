@@ -6,7 +6,8 @@ const run = async (client, interaction) => {
 		.setTitle('Hướng dẫn khóa khối')
 		.setURL('https://www.crystalgemcraft.xyz/')
 		.setAuthor({ name: 'CrytalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'https://www.crystalgemcraft.xyz/' })
-		.setDescription(`✔️ Khi vote cho server hãy đảm bảo rằng tên bạn dùng để vote giống với trong server đối với
+		.setDescription(`
+		✔️ Khi vote cho server hãy đảm bảo rằng tên bạn dùng để vote giống với trong server đối với
 		Người chơi bedrock(bản điện thoại) thêm dấu **.** ở đầu tên.
 		✔️ Khi vote cho server bạn sẽ nhận được ngẫu nhiên 1 loại key nào đó + tiền + levels
 		✔️ /vote ToggleReminders : Bật/tắt thông báo khi bạn có lượt vote khả dụng mới
