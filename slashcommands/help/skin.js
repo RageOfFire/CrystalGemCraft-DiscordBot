@@ -5,7 +5,7 @@ const run = async (client, interaction) => {
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn đổi skin')
 		.setURL('https://www.crystalgemcraft.xyz/')
-		.setAuthor({ name: 'CrystalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'https://www.crystalgemcraft.xyz/' })
+		.setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL(), url: 'https://www.crystalgemcraft.xyz/' })
 		.setDescription(`
 		🎨 /skin "Tên skin" : Đổi skin của bản thân bằng với "Tên skin"
 		🎨 /skin url "Link" : Đổi skin của bản thân bằng với "Link" của skin đó
@@ -16,14 +16,13 @@ const run = async (client, interaction) => {
 		🎨 /petblock call : Cần VIP | Gọi lại pet đến gần bạn
 		🎨 /petblock rename "Ngẫu nhiên" : Cần VIP | Đổi tên pet của bạn trong đó "Ngẫu nhiên" là tùy chọn
 		🎨 /petblock skin "Tên" : Cần VIP | Đổi skin cho pet của bạn`)
-		.setThumbnail('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
+		.setThumbnail(client.user.displayAvatarURL())
 		.addFields(
 			{ name: 'Tham gia trên Java', value: hyperlink('mc.crystalgemcraft.xyz','https://www.crystalgemcraft.xyz/'), inline: true },
 			{ name: 'Tham gia trên bedrock', value: hyperlink('mc.crystalgemcraft.xyz:19132','https://www.crystalgemcraft.xyz/'), inline: true },
 		)
-		.setImage('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
 		.setTimestamp()
-		.setFooter({ text: 'CrystalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160' });
+		.setFooter({ text: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL() });
 	interaction.reply({ embeds: [skinEmbed] }).catch((err) => {console.log(err)})
 }
 module.exports = {

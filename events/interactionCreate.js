@@ -2,19 +2,19 @@ module.exports = {
     name: "interactionCreate",
     run: async (bot, interaction) => {
         if(interaction.isCommand()) handleSlashCommand(bot, interaction)
-        else if (interaction.isButton()) handleButton(bot, interaction)
+        // else if (interaction.isButton()) handleButton(bot, interaction)
     },
 }
 
-const handleButton = (bot, interaction) => {
-    const { client } = bot
+// const handleButton = (bot, interaction) => {
+//     const { client } = bot
 
-    const[name, ...params] = interaction.customId.split('-')
+//     const[name, ...params] = interaction.customId.split('-')
 
-    const button = client.buttons.get(name)
-    if(!button) return
-    button.run(client, interaction, params)
-}
+//     const button = client.buttons.get(name)
+//     if(!button) return
+//     button.run(client, interaction, params)
+// }
 
 const handleSlashCommand = (bot, interaction) => {
     const { client, owner } = bot

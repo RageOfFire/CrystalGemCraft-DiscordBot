@@ -11,7 +11,7 @@ module.exports = {
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn dịch chuyển ngẫu nhiên')
 		.setURL('https://www.crystalgemcraft.xyz/')
-		.setAuthor({ name: 'CrystalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'https://www.crystalgemcraft.xyz/' })
+		.setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL(), url: 'https://www.crystalgemcraft.xyz/' })
 		.setDescription(`
 		🔮 /rtp : Dịch chuyển bạn đến 1 nơi ngẫu nhiên trên thế giới
 		🔮 /rtp biome "Tên biome" : Cần VIP | Dịch chuyển bạn tới 1 khu ngẫu nhiên với 1 biome được chọn sẵn
@@ -21,14 +21,13 @@ module.exports = {
 		🔮 /tpahere "Tên người chơi" : Gửi 1 yêu cầu người chơi đó dịch chuyển tới bản thân bạn
 		🔮 /rw tp : Dịch chuyển tới thế giới vô hạn tài nguyên
 		🔮 /rw tp nether/end : Dịch chuyển tới thế giới nether/end vô hạn tài nguyên`)
-		.setThumbnail('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
+		.setThumbnail(client.user.displayAvatarURL())
 		.addFields(
 			{ name: 'Tham gia trên Java', value: hyperlink('mc.crystalgemcraft.xyz','https://www.crystalgemcraft.xyz/'), inline: true },
 			{ name: 'Tham gia trên bedrock', value: hyperlink('mc.crystalgemcraft.xyz:19132','https://www.crystalgemcraft.xyz/'), inline: true },
 		)
-		.setImage('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
 		.setTimestamp()
-		.setFooter({ text: 'CrystalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160' });
+		.setFooter({ text: `Được đề xuất bởi ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) });
 	message.reply({ embeds: [rtpEmbed] }).catch((err) => {console.log(err)})
 	}
 }

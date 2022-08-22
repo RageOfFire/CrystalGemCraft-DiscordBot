@@ -1,5 +1,5 @@
 const run = async(client, interaction) => {
-    interaction.reply(`🏓Độ trễ là ${Date.now() - message.createdTimestamp}ms. Độ trễ API là ${Math.round(client.ws.ping)}ms`).catch((err) => {console.log(err)});
+    interaction.reply(`🏓Độ trễ là ${Date.now() - interaction.createdTimestamp}ms. Độ trễ API là ${Math.round(client.ws.ping)}ms`).catch((err) => {console.log(err)});
 }
 
 module.exports = {

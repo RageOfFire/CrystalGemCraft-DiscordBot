@@ -3,9 +3,9 @@ const { hyperlink } = require('@discordjs/builders');
 const run = async (client, interaction) => {
 	const kdEmbed = new MessageEmbed()
 		.setColor('#faa152')
-		.setTitle('Hướng dẫn khóa khối')
+		.setTitle('Hướng dẫn vote')
 		.setURL('https://www.crystalgemcraft.xyz/')
-		.setAuthor({ name: 'CrytalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160', url: 'https://www.crystalgemcraft.xyz/' })
+		.setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL(), url: 'https://www.crystalgemcraft.xyz/' })
 		.setDescription(`
 		✔️ Khi vote cho server hãy đảm bảo rằng tên bạn dùng để vote giống với trong server đối với
 		Người chơi bedrock(bản điện thoại) thêm dấu **.** ở đầu tên.
@@ -17,14 +17,13 @@ const run = async (client, interaction) => {
 		✔️ /vote : Mở gui vote
 		✔️ /vote Top (All/Monthly/Weekly/Daily) : Xem bảng xếp hạng người chơi đã vote theo thứ tự (Tất cả/Tháng/Tuần/Ngày)
 		✔️ Thêm thông tin tại: ${hyperlink('Thông tin','https://github.com/BenCodez/VotingPlugin/wiki/Commands-&-Permissions')}`)
-		.setThumbnail('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
+		.setThumbnail(client.user.displayAvatarURL())
 		.addFields(
 			{ name: 'Tham gia trên Java', value: hyperlink('mc.crystalgemcraft.xyz','https://www.crystalgemcraft.xyz/'), inline: true },
 			{ name: 'Tham gia trên bedrock', value: hyperlink('mc.crystalgemcraft.xyz:19132','https://www.crystalgemcraft.xyz/'), inline: true },
 		)
-		.setImage('https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160')
 		.setTimestamp()
-		.setFooter({ text: 'CrytalGemCraft', iconURL: 'https://cdn.discordapp.com/avatars/848871888360046634/7f95245e645714ed89256fa5f8f01ffe.webp?size=160' });
+		.setFooter({ text: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL() });
 	interaction.reply({ embeds: [kdEmbed] }).catch((err) => {console.log(err)})
 }
 module.exports = {
