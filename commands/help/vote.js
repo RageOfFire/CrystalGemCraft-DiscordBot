@@ -1,9 +1,9 @@
 const { MessageEmbed } = require('discord.js')
 const { hyperlink } = require('@discordjs/builders');
 module.exports = {
-	name: "kd",
+	name: "vote",
 	category: "help",
-	description: 'Xem hướng dẫn các lệnh sử dụng tiền đặc biệt',
+	description: 'Xem hướng dẫn về các vote cho server',
 	permissions: [],
 	devOnly: false,
 	run: async ({ client, message, args }) => {
