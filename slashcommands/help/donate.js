@@ -8,9 +8,9 @@ const run = async (client, interaction) => {
         `Bước 4: Sẽ hiện ra 1 mục tiếp theo là Mã Thẻ, bạn hãy nhập mã thẻ vào đây và ngồi chờ đợi thẻ được xử lý`
     ];
     const images = [
-        "../../img/step1.png",
-        "../../img/step2.png",
-        "../../img/step3.png",
+        "https://raw.githubusercontent.com/RageOfFire/CrystalGemCraft-DiscordBot/main/img/step1.png",
+        "https://raw.githubusercontent.com/RageOfFire/CrystalGemCraft-DiscordBot/main/img/step2.png",
+        "https://raw.githubusercontent.com/RageOfFire/CrystalGemCraft-DiscordBot/main/img/step3.png",
     ];
     const pagination = new Pagination(interaction, { limit: 1 })
     .setColor('#faa152')
