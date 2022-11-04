@@ -4,13 +4,12 @@ const { getFiles } = require("../../util/functions")
 require("dotenv").config()
 const fs = require("fs")
 const run = async (client, interaction) => {
-	let prefix = process.env.PREFIX
-	let HelpCMD = 'Tất cả lệnh đều bắt đầu = ' + prefix + '\n\n';
-	fs.readdirSync('./commands/').forEach((category) => {
-		let commands = getFiles(`./commands/${category}`, ".js")
+	let HelpCMD = '';
+	fs.readdirSync('./slashcommands/').forEach((category) => {
+		let commands = getFiles(`./slashcommands/${category}`, ".js")
 		commands.forEach((f) => {
 			const command = require(`../${category}/${f}`)
-			HelpCMD += `🔶${prefix}${command.name}: ${command.description}\n\n`
+			HelpCMD += `🔶/${command.name}: ${command.description}\n`
 		})
 	})
 	const helpEmbed = new MessageEmbed()

@@ -21,6 +21,7 @@
 * [Discord.js](https://discord.js.org/#/).
 * [DotENV](https://www.npmjs.com/package/dotenv).
 * [AntiSpam](https://www.npmjs.com/package/discord-anti-spam).
+* [Pagination.djs](https://pagination-djs.js.org/).
 
 ### Cài đặt
 
