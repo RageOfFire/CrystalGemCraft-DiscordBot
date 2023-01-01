@@ -46,6 +46,19 @@ function initEvents(bot) {
     })
     client.on('messageCreate', (message) => {
         triggerEventHandler(bot, "messageCreate", message)
+        // Anti Ping
+        const staffMember = message.mentions.users.first();
+        if(staffMember) {
+            const staffTarget = message.guild.members.cache.get(staffMember.id);
+            const permissionsCheck = staffTarget.permissions.has("MANAGE_CHANNELS");
+                if (permissionsCheck) {
+                    message.delete()
+                    .then(msg => {
+                        msg.channel.send(`Này bro đừng ping người quản lý nha !`)
+                    }).catch((err) => {console.log(err)});
+                }
+        }
+        // Anti Ping 
         antiSpam.message(message)
     })
     client.on("interactionCreate", (interaction) => {

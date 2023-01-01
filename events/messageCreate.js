@@ -2,27 +2,13 @@ module.exports = {
     name: "messageCreate",
     run: async function runAll(bot, message) {
         // const { client, prefix, owner } = bot
+        // const punishableMentions = message.mentions.members.filter(member => member.permissions.has("MANAGE_CHANNELS"))
 
-        if (!message.guild) return
-        if (message.author.bot) return
+        if (!message.guild) return;
+        if (message.author.bot) return;
         if (message.content.includes("@here") || message.content.includes("@everyone")) return;
 
         // const args = message.content.slice(prefix.length).trim().split(/ +/g)
-
-        // // chat command if reply bot
-        // if (!message.content.startsWith(prefix)) {
-        //     const chatCommand = client.commands.get('chat');
-        //     try {
-        //         await chatCommand.run({...bot, message, args })
-        //     } catch (err) {
-        //         let errMSG = err.toString()
-        //         if (errMSG.startsWith("?")) {
-        //             errMSG = errMSG.slice(1)
-        //             await message.reply(errMSG)
-        //         } else
-        //             console.error(err)
-        //     }
-        // }
         
         // const cmdstr = args.shift().toLowerCase()
 
