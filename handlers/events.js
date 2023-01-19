@@ -1,5 +1,6 @@
 const { getFiles } = require("../util/functions")
 const { antiSpam } = require("../util/antispam")
+const { antiPing } = require("../util/antiping")
 
 module.exports = (bot, reload) => {
     const { client } = bot
@@ -54,7 +55,7 @@ function initEvents(bot) {
                 if (permissionsCheck) {
                     message.delete()
                     .then(msg => {
-                        msg.channel.send(`Này bro đừng ping người quản lý nha !`)
+                        msg.channel.send({ embeds: [antiPing] })
                     }).catch((err) => {console.log(err)});
                 }
         }
