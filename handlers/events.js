@@ -51,13 +51,15 @@ function initEvents(bot) {
         const staffMember = message.mentions.users.first();
         if(staffMember) {
             const staffTarget = message.guild.members.cache.get(staffMember.id);
-            const permissionsCheck = staffTarget.permissions.has("MANAGE_CHANNELS");
-                if (permissionsCheck) {
-                    message.delete()
-                    .then(msg => {
-                        msg.channel.send({ embeds: [antiPing] })
-                    }).catch((err) => {console.log(err)});
-                }
+            if(staffTarget) {
+                const permissionsCheck = staffTarget.permissions.has("MANAGE_CHANNELS");
+                    if (permissionsCheck) {
+                        message.delete()
+                        .then(msg => {
+                            msg.channel.send({ embeds: [antiPing] })
+                        }).catch((err) => {console.log(err)});
+                    }
+            }
         }
         // Anti Ping 
         antiSpam.message(message)
