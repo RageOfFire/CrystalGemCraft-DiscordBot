@@ -1,6 +1,6 @@
 const { getFiles } = require("../util/functions")
 const { antiSpam } = require("../util/antispam")
-const { antiPing } = require("../util/antiping")
+const { MessageEmbed } = require('discord.js')
 
 module.exports = (bot, reload) => {
     const { client } = bot
@@ -42,12 +42,15 @@ function initEvents(bot) {
     client.on('ready', () => {
         triggerEventHandler(bot, "ready")
     })
-    client.on('messageCreate', (message) => {
-        triggerEventHandler(bot, "messageCreate", message)
-    })
+    // client.on('messageCreate', (message) => {
+    //     triggerEventHandler(bot, "messageCreate", message)
+    // })
     client.on('messageCreate', (message) => {
         triggerEventHandler(bot, "messageCreate", message)
         // Anti Ping
+        const antiPing = new MessageEmbed()
+        .setColor('#faa152')
+        .setTitle(message.author.toString() + ' đừng ping người quản lý nha !')
         const staffMember = message.mentions.users.first();
         if(staffMember) {
             const staffTarget = message.guild.members.cache.get(staffMember.id);
