@@ -55,7 +55,7 @@ function initEvents(bot) {
         if(staffMember) {
             const staffTarget = message.guild.members.cache.get(staffMember.id);
             if(staffTarget) {
-                const permissionsCheck = staffTarget.permissions.has("MANAGE_CHANNELS");
+                const permissionsCheck = staffTarget.permissions.has("BAN_MEMBERS");
                     if (permissionsCheck) {
                         message.delete()
                         .then(msg => {
