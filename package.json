@@ -13,7 +13,6 @@
     "discord-anti-spam": "^2.7.3",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
-    "pagination.djs": "^3.6.3",
-    "ytdl-core": "^4.11.2"
+    "pagination.djs": "^3.6.3"
   }
 }
