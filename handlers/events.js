@@ -47,24 +47,6 @@ function initEvents(bot) {
     // })
     client.on('messageCreate', (message) => {
         triggerEventHandler(bot, "messageCreate", message)
-        // Anti Ping
-        const antiPing = new MessageEmbed()
-        .setColor('#faa152')
-        .setTitle(message.author.toString() + ' đừng ping người quản lý nha !')
-        const staffMember = message.mentions.users.first();
-        if(staffMember) {
-            const staffTarget = message.guild.members.cache.get(staffMember.id);
-            if(staffTarget) {
-                const permissionsCheck = staffTarget.permissions.has("BAN_MEMBERS");
-                    if (permissionsCheck) {
-                        message.delete()
-                        .then(msg => {
-                            msg.channel.send({ embeds: [antiPing] })
-                        }).catch((err) => {console.log(err)});
-                    }
-            }
-        }
-        // Anti Ping 
         antiSpam.message(message)
     })
     client.on("interactionCreate", (interaction) => {
