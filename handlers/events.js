@@ -47,7 +47,7 @@ function initEvents(bot) {
     // })
     client.on('messageCreate', (message) => {
         triggerEventHandler(bot, "messageCreate", message)
-        antiSpam.message(message)
+        antiSpam.message(message).catch((err) => {console.log(err)});
     })
     client.on("interactionCreate", (interaction) => {
         triggerEventHandler(bot, "interactionCreate", interaction)
