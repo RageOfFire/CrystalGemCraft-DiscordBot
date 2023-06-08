@@ -23,8 +23,12 @@ const run = async (client, interaction) => {
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp()
     const donateEmbed2 = new MessageEmbed()
+    .setColor('#faa152')
+    .setURL('https://www.crystalgemcraft.xyz/')
     .setImage(images[1])
     const donateEmbed3 = new MessageEmbed()
+    .setColor('#faa152')
+    .setURL('https://www.crystalgemcraft.xyz/')
     .setImage(images[2])
 
     interaction.reply({ embeds: [donateEmbed1, donateEmbed2, donateEmbed3] }).catch((err) => {console.log(err)});
