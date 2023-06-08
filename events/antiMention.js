@@ -20,7 +20,7 @@ module.exports = {
     .setTimestamp()
     .setFooter({ text: `Bởi ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) });
 
-    if (message.mentions.users.size) {
+    if (message.mentions.users.size && message.type != "REPLY") {
       const mentionedUsers = message.mentions.users;
 
       const authorRoles = message.member.roles.cache;
