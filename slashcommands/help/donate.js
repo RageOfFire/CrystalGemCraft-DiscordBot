@@ -1,31 +1,33 @@
-const { Pagination } = require('pagination.djs');
-const { hyperlink } = require('@discordjs/builders');
+const { MessageEmbed } = require('discord.js')
 const run = async (client, interaction) => {
+
     const descriptions = [
-        `Bước 1 nhập lệnh /napthe ở trong game`,
-        `Bước 2: Chọn tên thẻ và số tiền của thẻ`,
-        `Bước 3: nhập Seri của thẻ vào phía khung đổi tên`,
-        `Bước 4: Sẽ hiện ra 1 mục tiếp theo là Mã Thẻ, bạn hãy nhập mã thẻ vào đây và ngồi chờ đợi thẻ được xử lý`
+        '💵 Bước 1 nhập lệnh /napthe ở trong game\n',
+        '💵 Bước 2: Chọn tên thẻ và số tiền của thẻ\n',
+        '💵 Bước 3: nhập Seri của thẻ vào phía khung đổi tên\n',
+		'💵 Bước 4: Sẽ hiện ra 1 mục tiếp theo là Mã Thẻ, bạn hãy nhập mã thẻ vào đây và ngồi chờ đợi thẻ được xử lý',
     ];
+    
     const images = [
         "https://raw.githubusercontent.com/RageOfFire/CrystalGemCraft-DiscordBot/main/img/step1.png",
         "https://raw.githubusercontent.com/RageOfFire/CrystalGemCraft-DiscordBot/main/img/step2.png",
         "https://raw.githubusercontent.com/RageOfFire/CrystalGemCraft-DiscordBot/main/img/step3.png",
     ];
-    const pagination = new Pagination(interaction, { limit: 1 })
+    const donateEmbed1 = new MessageEmbed()
     .setColor('#faa152')
-    .setTitle('Hướng dẫn Donate')
+    .setTitle('Hướng dẫn Donate #1')
     .setURL('https://www.crystalgemcraft.xyz/')
-    .setDescriptions(descriptions)
-    .setImages(images)
+    .setDescription(descriptions.join("").toString())
+    .setImage(images[0])
     .setAuthor({ name: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
     .setThumbnail(client.user.displayAvatarURL())
-    .addFields(
-        { name: 'Tham gia trên Java', value: hyperlink('mc.crystalgemcraft.xyz','https://www.crystalgemcraft.xyz/'), inline: true },
-        { name: 'Tham gia trên bedrock', value: hyperlink('mc.crystalgemcraft.xyz:19132','https://www.crystalgemcraft.xyz/'), inline: true },
-    )
     .setTimestamp()
-    pagination.render().catch((err) => {console.log(err)});
+    const donateEmbed2 = new MessageEmbed()
+    .setImage(images[1])
+    const donateEmbed3 = new MessageEmbed()
+    .setImage(images[2])
+
+    interaction.reply({ embeds: [donateEmbed1, donateEmbed2, donateEmbed3] }).catch((err) => {console.log(err)});
 }
 module.exports = {
 	name: "donate",

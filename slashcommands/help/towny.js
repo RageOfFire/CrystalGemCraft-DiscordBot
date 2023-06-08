@@ -1,4 +1,4 @@
-const { Pagination } = require('pagination.djs');
+const { MessageEmbed } = require('discord.js')
 const { hyperlink } = require('@discordjs/builders');
 const run = async (client, interaction) => {
 	const descriptions = [
@@ -33,19 +33,16 @@ const run = async (client, interaction) => {
 		'\n',
 		'🏰Thêm thông tin tại: ' + hyperlink('Thông tin','https://github.com/TownyAdvanced/Towny/wiki/Towny-Commands'),
     ];
-	const pagination = new Pagination(interaction, { limit: 5 })
+	const townyEmbed = new MessageEmbed()
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn Towny')
 		.setURL('https://www.crystalgemcraft.xyz/')
 		.setAuthor({ name: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
-		.setDescriptions(descriptions)
+		.setDescription(descriptions.join("").toString())
 		.setThumbnail(client.user.displayAvatarURL())
-		.addFields(
-			{ name: 'Tham gia trên Java', value: hyperlink('mc.crystalgemcraft.xyz','https://www.crystalgemcraft.xyz/'), inline: true },
-			{ name: 'Tham gia trên bedrock', value: hyperlink('mc.crystalgemcraft.xyz:19132','https://www.crystalgemcraft.xyz/'), inline: true },
-		)
 		.setTimestamp()
-		pagination.render().catch((err) => {console.log(err)});
+
+		interaction.reply({ embeds: [townyEmbed] }).catch((err) => {console.log(err)});
 }
 module.exports = {
 	name: "towny",

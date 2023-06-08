@@ -20,10 +20,6 @@ const run = async (client, interaction) => {
 		.setAuthor({ name: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
 		.setDescription(descriptions.join("").toString())
 		.setThumbnail(client.user.displayAvatarURL())
-		.addFields(
-			{ name: 'Tham gia trên Java', value: hyperlink('mc.crystalgemcraft.xyz','https://www.crystalgemcraft.xyz/'), inline: true },
-			{ name: 'Tham gia trên bedrock', value: hyperlink('mc.crystalgemcraft.xyz:19132','https://www.crystalgemcraft.xyz/'), inline: true },
-		)
 		.setTimestamp()
 	interaction.reply({ embeds: [voteEmbed] }).catch((err) => {console.log(err)})
 }

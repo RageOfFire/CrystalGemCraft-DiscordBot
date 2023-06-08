@@ -42,11 +42,9 @@ function initEvents(bot) {
     client.on('ready', () => {
         triggerEventHandler(bot, "ready")
     })
-    // client.on('messageCreate', (message) => {
-    //     triggerEventHandler(bot, "messageCreate", message)
-    // })
     client.on('messageCreate', (message) => {
         triggerEventHandler(bot, "messageCreate", message)
+        triggerEventHandler(bot, "antiMention", message)
         antiSpam.message(message).catch((err) => {console.log(err)});
     })
     client.on("interactionCreate", (interaction) => {

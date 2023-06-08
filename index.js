@@ -12,7 +12,7 @@ const client = new Discord.Client({
 let bot = {
     client,
     // prefix: process.env.PREFIX,
-    owner: ['279932957769072641']
+    owner: [process.env.OWNER]
 }
 
 client.events = new Discord.Collection()
