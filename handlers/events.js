@@ -1,6 +1,4 @@
 const { getFiles } = require("../util/functions")
-const { antiSpam } = require("../util/antispam")
-const { MessageEmbed } = require('discord.js')
 
 module.exports = (bot, reload) => {
     const { client } = bot
@@ -45,7 +43,6 @@ function initEvents(bot) {
     client.on('messageCreate', (message) => {
         triggerEventHandler(bot, "messageCreate", message)
         triggerEventHandler(bot, "antiMention", message)
-        antiSpam.message(message).catch((err) => {console.log(err)});
     })
     client.on("interactionCreate", (interaction) => {
         triggerEventHandler(bot, "interactionCreate", interaction)

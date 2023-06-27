@@ -37,7 +37,7 @@ const run = async (client, interaction) => {
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn Towny')
 		.setURL('https://www.crystalgemcraft.xyz/')
-		.setAuthor({ name: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
+		.setAuthor({ name: `Được đề xuất bởi ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
 		.setDescription(descriptions.join("").toString())
 		.setThumbnail(client.user.displayAvatarURL())
 		.setTimestamp()

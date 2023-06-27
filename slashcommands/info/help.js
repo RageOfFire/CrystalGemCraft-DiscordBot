@@ -24,7 +24,7 @@ const run = async (client, interaction) => {
 			{ name: 'Tham gia trên bedrock', value: hyperlink('mc.crystalgemcraft.xyz:19132','https://www.crystalgemcraft.xyz/'), inline: true },
 		)
 		.setTimestamp()
-		.setFooter({ text: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL() });
+		.setFooter({ text: `Được đề xuất bởi ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL() });
 	interaction.reply({ embeds: [helpEmbed] }).catch((err) => {console.log(err)})
 }
 module.exports = {

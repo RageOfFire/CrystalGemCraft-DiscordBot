@@ -19,7 +19,7 @@ const run = async (client, interaction) => {
     .setURL('https://www.crystalgemcraft.xyz/')
     .setDescription(descriptions.join("").toString())
     .setImage(images[0])
-    .setAuthor({ name: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
+    .setAuthor({ name: `Được đề xuất bởi ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp()
     const donateEmbed2 = new MessageEmbed()

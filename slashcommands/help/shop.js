@@ -8,15 +8,13 @@ const run = async (client, interaction) => {
         '🏦 /sellall hand : bán tất cả vật phẩm trên tay bạn\n',
 		'🏦 /sellgui : Mở 1 gui bán đồ bạn có thể đưa đồ vào đó rồi đóng gui sẽ tự động bán hết đồ bạn để vào đó\n',
 		'🏦 /trade "tên người chơi" : Trao đổi vật phẩm hoặc tiền với người chơi khác\n',
-		'🏦 /ah : Mở chợ đen\n',
-		'🏦 /ah sell $ : Bán vật phẩm trên tay lên chợ đen\n',
 		'Thêm thông tin tại:' + hyperlink('Thông tin','https://gpplugins.gitbook.io/economyshopgui/basics/commands')
     ];
 	const shopEmbed = new MessageEmbed()
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn Shop')
 		.setURL('https://www.crystalgemcraft.xyz/')
-		.setAuthor({ name: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
+		.setAuthor({ name: `Được đề xuất bởi ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
 		.setDescription(descriptions.join("").toString())
 		.setThumbnail(client.user.displayAvatarURL())
 		.setTimestamp()

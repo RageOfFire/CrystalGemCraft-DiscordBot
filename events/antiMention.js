@@ -18,7 +18,7 @@ module.exports = {
     .setDescription("Làm ơn đừng làm phiền người quản lý ! Khi nào rảnh bọn mình sẽ xem tin nhắn việc ping này không giúp bạn có câu trả lời nhanh hơn đâu")
     .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
     .setTimestamp()
-    .setFooter({ text: `Bởi ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) });
+    .setFooter({ text: `Bởi ${message.author.username}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) });
 
     if (message.mentions.users.size && message.type != "REPLY") {
       const mentionedUsers = message.mentions.users;

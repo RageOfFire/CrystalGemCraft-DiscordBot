@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const { hyperlink } = require('@discordjs/builders');
 const run = async (client, interaction) => {
 	const descriptions = [
         '🎨 /skin "Tên skin" : Đổi skin của bản thân bằng với "Tên skin"\n',
@@ -11,7 +10,7 @@ const run = async (client, interaction) => {
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn đổi skin')
 		.setURL('https://www.crystalgemcraft.xyz/')
-		.setAuthor({ name: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
+		.setAuthor({ name: `Được đề xuất bởi ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.xyz/' })
 		.setDescription(descriptions.join("").toString())
 		.setThumbnail(client.user.displayAvatarURL())
 		.setTimestamp()
