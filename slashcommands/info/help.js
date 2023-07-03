@@ -8,10 +8,10 @@ const run = async (client, interaction) => {
 	fs.readdirSync('./slashcommands/').forEach((category) => {
 		let commands = getFiles(`./slashcommands/${category}`, ".js")
 		commands.forEach((f) => {
-			const command = require(`../${category}/${f}`)
-			HelpCMD += `🔶/${command.name}: ${command.description}\n`
-		})
-	})
+				const command = require(`../${category}/${f}`)
+				HelpCMD += `🔶/${command.name}: ${command.description}\n`
+      })
+    })
 	const helpEmbed = new MessageEmbed()
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn')

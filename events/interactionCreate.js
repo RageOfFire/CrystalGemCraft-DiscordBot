@@ -18,10 +18,10 @@ module.exports = {
 
 const handleSlashCommand = (bot, interaction) => {
     const { client, owner } = bot
-    if(!interaction.inGuild()) return interaction.reply('this command can be used in server only').catch((err) => {console.log(err)});
+    if(!interaction.inGuild()) return interaction.reply('Lệnh chỉ có thể sử dụng trong máy chủ').catch((err) => {console.log(err)});
     
     const slashcmd = client.slashcommands.get(interaction.commandName)
-    if(!slashcmd) return interaction.reply("Invalid slash command").catch((err) => {console.log(err)});
+    if(!slashcmd) return interaction.reply("Lệnh không hợp lệ").catch((err) => {console.log(err)});
 
     let member = interaction.user
     if (slashcmd.devOnly && !owner.includes(member.id)) {
@@ -29,6 +29,6 @@ const handleSlashCommand = (bot, interaction) => {
     }
 
     if(slashcmd.permissions && !interaction.member.permissions.has(slashcmd.permissions))
-        return interaction.reply("You don't have permission").catch((err) => {console.log(err)});
+        return interaction.reply("Bạn không có quyền sử dụng lệnh này").catch((err) => {console.log(err)});
     slashcmd.run(client, interaction);
 }
