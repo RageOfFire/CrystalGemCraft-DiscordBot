@@ -1,5 +1,10 @@
 const { MessageEmbed } = require('discord.js')
 const run = async (client, interaction) => {
+    const dmMessage = () => {
+        console.log(`Người quản lý ${interaction.user.username} vừa gửi 1 tin nhắn riêng tới ${user} với màu là ${color || 'mặc định'}, tiêu đề ${title}, mô tả ${info}`)
+	    client.users.send(member, { embeds: [dmEmbed] }).catch((err) => {console.log(err)})
+        interaction.reply({ content: "Gửi tin nhắn thành công", ephemeral: true }).catch((err) => {console.log(err);});
+    }
 	const member = interaction.options.getMember('user');
 	const color = interaction.options.getString('color');
     const title = interaction.options.getString('title');
@@ -9,12 +14,12 @@ const run = async (client, interaction) => {
 	.setColor(color || '#faa152')
 	.setTitle(title || 'CrystalGemCraft')
 	.setDescription(info || '')
-	.setThumbnail(client.user.displayAvatarURL())
 	.setTimestamp()
     if(validColor) {
-        console.log(`Người quản lý ${interaction.user.username} vừa gửi 1 tin nhắn riêng tới ${user} với /màu là ${color}/tiêu đề ${title}/mô tả ${info}`)
-	    client.users.send(member, { embeds: [dmEmbed] }).catch((err) => {console.log(err)})
-        interaction.reply({ content: "Gửi tin nhắn thành công", ephemeral: true }).catch((err) => {console.log(err);});
+        dmMessage()
+    }
+    else if(!color) {
+        dmMessage()
     }
     else {
         interaction.reply({ content: "Mã màu không hợp lệ", ephemeral: true }).catch((err) => {console.log(err);});

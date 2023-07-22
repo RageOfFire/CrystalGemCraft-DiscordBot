@@ -1,5 +1,10 @@
 const { MessageEmbed } = require('discord.js')
 const run = async (client, interaction) => {
+    const bcMessage = () => {
+        console.log(`Người quản lý ${interaction.user.username} vừa gửi 1 thông báo tới kênh (${channel}) với màu là (${color || 'mặc định'}), tiêu đề là (${title}), mô tả là (${info})`)
+	    channel.send({ embeds: [bcEmbed] }).catch((err) => {console.log(err)})
+        interaction.reply({ content: "Gửi tin nhắn thành công", ephemeral: true }).catch((err) => {console.log(err);});
+    }
 	const channel = interaction.options.getChannel('channel');
 	const color = interaction.options.getString('color');
     const title = interaction.options.getString('title');
@@ -9,12 +14,12 @@ const run = async (client, interaction) => {
 	.setColor(color || '#faa152')
 	.setTitle(title || 'CrystalGemCraft')
 	.setDescription(info || '')
-	.setThumbnail(client.user.displayAvatarURL())
 	.setTimestamp()
     if(validColor) {
-        console.log(`Người quản lý ${interaction.user.username} vừa gửi 1 thông báo tới kênh (${channel}) với /màu là (${color})/tiêu đề là (${title})/mô tả là (${info})`)
-	    channel.send({ embeds: [bcEmbed] }).catch((err) => {console.log(err)})
-        interaction.reply({ content: "Gửi tin nhắn thành công", ephemeral: true }).catch((err) => {console.log(err);});
+        bcMessage()
+    }
+    else if(!color) {
+        bcMessage()
     }
     else {
         interaction.reply({ content: "Mã màu không hợp lệ", ephemeral: true }).catch((err) => {console.log(err);});
