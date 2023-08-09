@@ -1,11 +1,13 @@
 {
   "name": "discordbot",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "docker build -t crystalgemcraft-bot .",
+    "docker": "docker run -d crystalgemcraft-bot --restart unless-stopped"
   },
   "author": "",
   "license": "ISC",

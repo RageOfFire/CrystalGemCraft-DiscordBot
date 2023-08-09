@@ -10,51 +10,58 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/CrystalGemCraft-DiscordBot)
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/RageOfFire/CrystalGemCraft-DiscordBot)
 
-## Mô tả
+## Description
 
-1 discord bot hỗ trợ 1 số lệnh cơ bản.
+A discord bot for manager your server.
 
-## Bắt đầu
+## Getting started
 
-### Yêu cầu
+### Required
 
 * [Discord.js](https://discord.js.org/#/).
 * [DotENV](https://www.npmjs.com/package/dotenv).
-* [AntiSpam](https://www.npmjs.com/package/discord-anti-spam).
-* [Pagination.djs](https://pagination-djs.js.org/).
 
-### Cài đặt
+### Installed
 
 ```sh
 npm i
 ```
 
-### Chạy
+### Setup
 
-* Lấy TOKEN bot của bạn tại [đây](https://discord.com/developers/applications)!
-* Tạo 1 file **.env** ngay tại nơi có file **index.js**!
-* Trong file **.env**
+* Get your bot TOKEN in [here](https://discord.com/developers/applications)!
+* Copy **.env.example** and rename it to **.env** right in the place have file name **index.js**!
+* In **.env** edit:
+* Optional: Your can add your discord id to set which command for only you can use
 
 ```sh
-TOKEN=TOKEN của bạn
-PREFIX=phần bắt đầu để chạy từng câu lệnh
+TOKEN=your-discord-bot-token
+PREFIX=a-prefix-to-use-command
+OWNER=your-discord-id-optional
 ```
 
-* Chạy chương trình
+### Run
 
 ```sh
 npm start
 ```
 
-## Hỗ trợ
+### Run [Docker](https://www.docker.com/)
+
+* Build project:
+```sh
+npm run build
+```
+* Start project:
+```sh
+npm run docker
+```
+
+## Support
 
 ![GitHub issues](https://img.shields.io/github/issues/RageOfFire/CrystalGemCraft-DiscordBot)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/RageOfFire/CrystalGemCraft-DiscordBot)
 
-## Tác giả
+## Author
 
 * [RageOfFire](https://github.com/RageOfFire)
-
-## License
-
-![GitHub](https://img.shields.io/github/license/RageOfFire/CrystalGemCraft-DiscordBot)
