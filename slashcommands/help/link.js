@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const { hyperlink } = require('@discordjs/builders');
 const run = async (client, interaction) => {
 	const descriptions = [
         'Để link với discord nhận free rank:\n',

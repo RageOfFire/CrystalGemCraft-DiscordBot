@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js')
-const { hyperlink } = require('@discordjs/builders');
 const run = async (client, interaction) => {
 	const descriptions = [
         '🔮 /rtp : Dịch chuyển bạn đến 1 nơi ngẫu nhiên trên thế giới\n',
