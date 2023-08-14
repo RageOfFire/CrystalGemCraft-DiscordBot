@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "build": "docker build -t crystalgemcraft-bot .",
-    "docker": "docker run -d crystalgemcraft-bot --restart unless-stopped"
+    "docker": "docker run -d --restart unless-stopped crystalgemcraft-bot"
   },
   "author": "",
   "license": "ISC",
