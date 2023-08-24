@@ -13,8 +13,8 @@ module.exports = {
     const antiMentionEmbed = new MessageEmbed()
     .setColor('#EE2E0D')
     .setTitle('Ping quản lý !!!')
-    .setURL('https://www.crystalgemcraft.xyz/')
-    .setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL(), url: 'https://www.crystalgemcraft.xyz/' })
+    .setURL('https://www.crystalgemcraft.com/')
+    .setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL(), url: 'https://www.crystalgemcraft.com/' })
     .setDescription("Làm ơn đừng làm phiền người quản lý ! Khi nào rảnh bọn mình sẽ xem tin nhắn việc ping này không giúp bạn có câu trả lời nhanh hơn đâu")
     .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
     .setTimestamp()
@@ -27,7 +27,7 @@ module.exports = {
 
       let authorHasBanPermission = false;
       for (const role of authorRoles.values()) {
-        if (role.permissions.has("BAN_MEMBERS")) {
+        if (role.permissions.has("MODERATE_MEMBERS")) {
           authorHasBanPermission = true;
           break;
         }
