@@ -9,6 +9,7 @@ WORKDIR /usr/src/crystalgemcraft-bot
 
 
 COPY package.json /usr/src/crystalgemcraft-bot
+COPY package-lock.json /usr/src/crystalgemcraft-bot
 
 RUN npm install
 
