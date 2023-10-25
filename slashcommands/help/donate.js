@@ -15,7 +15,7 @@ const run = async (client, interaction) => {
     ];
     const donateEmbed1 = new MessageEmbed()
     .setColor('#faa152')
-    .setTitle('Hướng dẫn Donate #1')
+    .setTitle('Hướng dẫn Donate')
     .setURL('https://www.crystalgemcraft.com/')
     .setDescription(descriptions.join("").toString())
     .setImage(images[0])

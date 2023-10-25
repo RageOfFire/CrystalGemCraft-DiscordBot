@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { templateEmbed } = require("../../util/templateEmbed")
 const run = async (client, interaction) => {
 	const descriptions = [
         '🎨 /skin "Tên skin" : Đổi skin của bản thân bằng với "Tên skin"\n',
@@ -6,14 +6,7 @@ const run = async (client, interaction) => {
         '🎨 /skin clear : Xóa skin của bản thân\n',
         '🎨 /skins : Mở 1 gui gồm nhiều skin để bạn chọn'
     ];
-	const skinEmbed = new MessageEmbed()
-		.setColor('#faa152')
-		.setTitle('Hướng dẫn đổi skin')
-		.setURL('https://www.crystalgemcraft.com/')
-		.setAuthor({ name: `Được đề xuất bởi ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true }), url: 'https://www.crystalgemcraft.com/' })
-		.setDescription(descriptions.join("").toString())
-		.setThumbnail(client.user.displayAvatarURL())
-		.setTimestamp()
+	const skinEmbed = templateEmbed(client, interaction, "Hướng dẫn đổi skin", descriptions.join("").toString())
 	interaction.reply({ embeds: [skinEmbed] }).catch((err) => {console.log(err)})
 }
 module.exports = {
