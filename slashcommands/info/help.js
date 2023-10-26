@@ -8,10 +8,11 @@ const run = async (client, interaction) => {
 	fs.readdirSync('./slashcommands/').forEach((category) => {
 		let commands = getFiles(`./slashcommands/${category}`, ".js")
 		commands.forEach((f) => {
-				const command = require(`../${category}/${f}`)
-				HelpCMD += `🔶/${command.name}: ${command.description}\n`
-      })
-    })
+			const command = require(`../${category}/${f}`)
+			HelpCMD += `🔶/${command.name}: ${command.description}\n`
+		})
+	})
+	HelpCMD += `Thêm thông tin tại ${hyperlink('📒 Wiki', 'https://crystalgemcraft.gitbook.io/wiki/')}`
 	const helpEmbed = new MessageEmbed()
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn')
@@ -21,7 +22,7 @@ const run = async (client, interaction) => {
 		.setThumbnail(client.user.displayAvatarURL())
 		.setTimestamp()
 		.setFooter({ text: `Được đề xuất bởi ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL() });
-	interaction.reply({ embeds: [helpEmbed] }).catch((err) => {console.log(err)})
+	interaction.reply({ embeds: [helpEmbed] }).catch((err) => { console.log(err) })
 }
 module.exports = {
 	name: "help",

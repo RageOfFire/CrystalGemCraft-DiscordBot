@@ -17,12 +17,15 @@ let bot = {
 
 client.events = new Discord.Collection()
 client.slashcommands = new Discord.Collection()
+client.helpers = new Discord.Collection()
 
 client.loadEvents = (bot, reload) => require("./handlers/events")(bot, reload)
 client.loadSlashCommands = (bot, reload) => require("./handlers/slashcommands")(bot, reload)
+client.loadHelpers = (bot, reload) => require("./handlers/helpers")(bot, reload)
 
 client.loadEvents(bot, false)
 client.loadSlashCommands(bot, false)
+client.loadHelpers(bot, false)
 
 module.exports = bot
 

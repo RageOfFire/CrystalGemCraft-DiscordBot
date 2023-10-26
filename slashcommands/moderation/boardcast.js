@@ -9,11 +9,12 @@ const run = async (client, interaction) => {
 	const color = interaction.options.getString('color');
     const title = interaction.options.getString('title');
 	const info = interaction.options.getString('info');
+    const role = interaction.options.getRole('role');
     const validColor = /^#[0-9A-F]{6}$/i.test(color);
 	const bcEmbed = new MessageEmbed()
 	.setColor(color || '#faa152')
 	.setTitle(title || 'CrystalGemCraft')
-	.setDescription(info || '')
+	.setDescription(info + ("\n" + role || '') || '')
 	.setTimestamp()
     if(validColor) {
         bcMessage()
@@ -37,6 +38,12 @@ module.exports = {
             description: "Kênh nhận tin nhắn",
             type: "CHANNEL",
             required: true
+        },
+        {
+            name: "role",
+            description: "Role được thông báo",
+            type: "ROLE",
+            required: false
         },
 		{
             name: "color",
