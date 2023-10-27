@@ -1,4 +1,5 @@
-const { hyperlink } = require('@discordjs/builders');
+const { templateEmbed } = require("../../util/messageEmbed");
+const { lands } = require("../../util/allDescription");
 module.exports = {
     name: "land",
     category: "response",
@@ -7,7 +8,7 @@ module.exports = {
         "đất"
     ],
     run: async ({ client, message }) => {
-        message.reply("Bạn có thể xem thêm thông tin tại " +
-        hyperlink('đây','https://crystalgemcraft.gitbook.io/wiki/cau-lenh/land'))
+        const landEmbed = templateEmbed(client, message, "Hướng dẫn sở hữu đất riêng", lands.join("").toString())
+        message.reply({ embeds: [landEmbed] }).catch((err) => {console.log(err)})
     }
 }

@@ -14,12 +14,23 @@
 
 A discord bot for manager your server.
 
+## Features
+
+* Slash command.
+* Anti ping system.
+* ban/kick/timeout user.
+* Send a message to specify channel
+* Some fun slash command.
+* Auto response if find word in user message
+* And much more...
+
 ## Getting started
 
 ### Required
 
 * [Discord.js](https://discord.js.org/#/).
 * [DotENV](https://www.npmjs.com/package/dotenv).
+* [Axios](https://axios-http.com/).
 
 ### Installed
 
@@ -36,7 +47,6 @@ npm i
 
 ```sh
 TOKEN=your-discord-bot-token
-PREFIX=a-prefix-to-use-command
 OWNER=your-discord-id-optional
 ```
 

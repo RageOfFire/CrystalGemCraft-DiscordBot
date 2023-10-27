@@ -14,7 +14,7 @@ const run = async (client, interaction) => {
 	const bcEmbed = new MessageEmbed()
 	.setColor(color || '#faa152')
 	.setTitle(title || 'CrystalGemCraft')
-	.setDescription(info + ("\n" + role || '') || '')
+	.setDescription((info || '') + (role ? "\n" + role : ''))
 	.setTimestamp()
     if(validColor) {
         bcMessage()

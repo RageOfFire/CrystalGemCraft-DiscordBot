@@ -1,4 +1,5 @@
-const { hyperlink } = require('@discordjs/builders');
+const { templateEmbed } = require("../../util/messageEmbed");
+const { skills } = require("../../util/allDescription");
 module.exports = {
     name: "skill",
     category: "response",
@@ -7,7 +8,7 @@ module.exports = {
         "chiêu"
     ],
     run: async ({ client, message }) => {
-        message.reply("Bạn có thể xem thêm thông tin tại " +
-        hyperlink('đây','https://crystalgemcraft.gitbook.io/wiki/cau-lenh/he-thong-ky-nang'))
+        const skillEmbed = templateEmbed(client, message, "Các combo key sử dụng kỹ năng", skills.join("").toString())
+        message.reply({ embeds: [skillEmbed] }).catch((err) => {console.log(err)})
     }
 }

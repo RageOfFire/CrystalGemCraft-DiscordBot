@@ -1,4 +1,5 @@
 const { hyperlink } = require('@discordjs/builders');
+const { templateEmbed } = require("../../util/messageEmbed");
 module.exports = {
     name: "craft",
     category: "response",
@@ -9,7 +10,12 @@ module.exports = {
         "nung"
     ],
     run: async ({ client, message }) => {
-        message.reply("Bạn có thể xem toàn bộ công thức tại " +
-        hyperlink('đây','https://crystalgemcraft.gitbook.io/wiki/craft/gioi-thieu'))
+        const craftEmbed = templateEmbed(
+            client,
+            message,
+            "Công thức chế tạo",
+            hyperlink('🛠 Công thức chế tạo','https://crystalgemcraft.gitbook.io/wiki/craft/gioi-thieu')
+            )
+            message.reply({ embeds: [craftEmbed] }).catch((err) => {console.log(err)})
     }
 }

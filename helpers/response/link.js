@@ -1,4 +1,5 @@
-const { hyperlink } = require('@discordjs/builders');
+const { templateEmbed } = require("../../util/messageEmbed");
+const { link } = require("../../util/allDescription");
 module.exports = {
     name: "link",
     category: "response",
@@ -8,7 +9,7 @@ module.exports = {
         "royal"
     ],
     run: async ({ client, message }) => {
-        message.reply("Bạn có thể xem hướng dẫn tại " +
-        hyperlink('đây','https://crystalgemcraft.gitbook.io/wiki/cau-lenh/link-discord'))
+        const linkEmbed = templateEmbed(client, message, "Hướng dẫn Link discord", link.join("").toString())
+        message.reply({ embeds: [linkEmbed] }).catch((err) => {console.log(err)})
     }
 }

@@ -1,4 +1,5 @@
 const { hyperlink } = require('@discordjs/builders');
+const { templateEmbed } = require("../../util/messageEmbed");
 module.exports = {
     name: "rank",
     category: "response",
@@ -6,7 +7,12 @@ module.exports = {
         'quyền'
     ],
     run: async ({ client, message }) => {
-        message.reply("Bạn có thể xem thông tin rank tại " +
-        hyperlink('đây','https://crystalgemcraft.gitbook.io/wiki/tong-quan/thong-tin-rank'))
+        const rankEmbed = templateEmbed(
+            client,
+            message,
+            "Quyền lợi Rank",
+            hyperlink('⭐️ Quyền lợi','https://crystalgemcraft.gitbook.io/wiki/tong-quan/thong-tin-rank')
+            )
+        message.reply({ embeds: [rankEmbed] }).catch((err) => {console.log(err)})
     }
 }

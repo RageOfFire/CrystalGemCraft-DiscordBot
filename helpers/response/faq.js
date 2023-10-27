@@ -1,4 +1,5 @@
 const { hyperlink } = require('@discordjs/builders');
+const { templateEmbed } = require("../../util/messageEmbed");
 module.exports = {
     name: "faq",
     category: "response",
@@ -8,6 +9,12 @@ module.exports = {
         "lỗi"
     ],
     run: async ({ client, message }) => {
-        message.reply(hyperlink('FAQ','https://crystalgemcraft.gitbook.io/wiki/tong-quan/faq'))
+        const faqEmbed = templateEmbed(
+            client,
+            message,
+            "Các câu hỏi thường gặp",
+            hyperlink('🕵️ Câu hỏi thường gặp','https://crystalgemcraft.gitbook.io/wiki/tong-quan/faq')
+            )
+        message.reply({ embeds: [faqEmbed] }).catch((err) => {console.log(err)})
     }
 }
