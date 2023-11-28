@@ -9,6 +9,6 @@ module.exports = {
     ],
     run: async ({ client, message }) => {
         const skillEmbed = templateEmbed(client, message, "Các combo key sử dụng kỹ năng", skills.join("").toString())
-        message.reply({ embeds: [skillEmbed] }).catch((err) => {console.log(err)})
+        message.reply({ embeds: [skillEmbed], ephemeral: true }).catch((err) => {console.log(err)})
     }
 }

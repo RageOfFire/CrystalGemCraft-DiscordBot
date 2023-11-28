@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js')
 const run = async (client, interaction) => {
     const bcMessage = () => {
-        console.log(`Người quản lý ${interaction.user.username} vừa gửi 1 thông báo tới kênh (${channel}) với màu là (${color || 'mặc định'}), tiêu đề là (${title}), mô tả là (${info})`)
+        console.log(`Người quản lý ${interaction.user.username} vừa gửi 1 thông báo tới kênh (${channel}) với màu là (${color ?? 'mặc định'}), tiêu đề là (${title}), mô tả là (${info})`)
 	    channel.send({ embeds: [bcEmbed] }).catch((err) => {console.log(err)})
         interaction.reply({ content: "Gửi tin nhắn thành công", ephemeral: true }).catch((err) => {console.log(err);});
     }
@@ -12,9 +12,9 @@ const run = async (client, interaction) => {
     const role = interaction.options.getRole('role');
     const validColor = /^#[0-9A-F]{6}$/i.test(color);
 	const bcEmbed = new MessageEmbed()
-	.setColor(color || '#faa152')
-	.setTitle(title || 'CrystalGemCraft')
-	.setDescription((info || '') + (role ? "\n" + role : ''))
+	.setColor(color ?? '#faa152')
+	.setTitle(title ?? 'CrystalGemCraft')
+	.setDescription((info ?? '') + (role ? "\n" + role : ''))
 	.setTimestamp()
     if(validColor) {
         bcMessage()

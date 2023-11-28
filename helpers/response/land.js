@@ -9,6 +9,6 @@ module.exports = {
     ],
     run: async ({ client, message }) => {
         const landEmbed = templateEmbed(client, message, "Hướng dẫn sở hữu đất riêng", lands.join("").toString())
-        message.reply({ embeds: [landEmbed] }).catch((err) => {console.log(err)})
+        message.reply({ embeds: [landEmbed], ephemeral: true }).catch((err) => {console.log(err)})
     }
 }

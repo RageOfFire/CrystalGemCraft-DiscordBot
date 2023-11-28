@@ -13,6 +13,6 @@ module.exports = {
             "Quyền lợi Rank",
             hyperlink('⭐️ Quyền lợi','https://crystalgemcraft.gitbook.io/wiki/tong-quan/thong-tin-rank')
             )
-        message.reply({ embeds: [rankEmbed] }).catch((err) => {console.log(err)})
+        message.reply({ embeds: [rankEmbed], ephemeral: true }).catch((err) => {console.log(err)})
     }
 }
