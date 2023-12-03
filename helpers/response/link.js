@@ -6,10 +6,10 @@ module.exports = {
     aliases: [
         "liên kết",
         "link discord",
-        "royal"
+        "royal "
     ],
     run: async ({ client, message }) => {
         const linkEmbed = templateEmbed(client, message, "Hướng dẫn Link discord", link.join("").toString())
-        message.reply({ embeds: [linkEmbed], ephemeral: true }).catch((err) => {console.log(err)})
+        message.reply({ embeds: [linkEmbed] }).catch((err) => {console.log(err)})
     }
 }

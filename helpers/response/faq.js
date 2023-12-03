@@ -4,9 +4,9 @@ module.exports = {
     name: "faq",
     category: "response",
     aliases: [
-        "admin",
-        "staff",
-        "lỗi"
+        "admin ",
+        "staff ",
+        "lỗi "
     ],
     run: async ({ client, message }) => {
         const faqEmbed = templateEmbed(
@@ -15,6 +15,6 @@ module.exports = {
             "Các câu hỏi thường gặp",
             hyperlink('🕵️ Câu hỏi thường gặp','https://crystalgemcraft.gitbook.io/wiki/tong-quan/faq')
             )
-        message.reply({ embeds: [faqEmbed], ephemeral: true }).catch((err) => {console.log(err)})
+        message.reply({ embeds: [faqEmbed] }).catch((err) => {console.log(err)})
     }
 }

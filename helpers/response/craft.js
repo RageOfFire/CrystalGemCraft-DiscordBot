@@ -6,7 +6,7 @@ module.exports = {
     aliases: [
         "công thức ",
         "chế ",
-        "item",
+        "item ",
         "nung "
     ],
     run: async ({ client, message }) => {
@@ -16,6 +16,6 @@ module.exports = {
             "Công thức chế tạo",
             hyperlink('🛠 Công thức chế tạo','https://crystalgemcraft.gitbook.io/wiki/craft/gioi-thieu')
             )
-            message.reply({ embeds: [craftEmbed], ephemeral: true }).catch((err) => {console.log(err)})
+            message.reply({ embeds: [craftEmbed] }).catch((err) => {console.log(err)})
     }
 }
