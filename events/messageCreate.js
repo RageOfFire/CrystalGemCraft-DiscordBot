@@ -4,7 +4,7 @@ const fs = require("fs")
 module.exports = {
     name: "messageCreate",
     run: async function runAll(bot, message) {
-        const { client } = bot
+        const { client, blacklist } = bot
 
         if (!message.guild) return;
         if (message.author.bot) return;
@@ -18,7 +18,9 @@ module.exports = {
                 if (message.content.toLowerCase().includes(help.name) || aliasesMatch) {
                     const helperCmd = client.helpers.get(help.name)
                     try {
-                        await helperCmd.run({ ...bot, message })
+                        if(!blacklist?.includes(message.channel.id)) {
+                            await helperCmd.run({ ...bot, message })
+                        }
                     } catch (err) {
                         let errMSG = err.toString()
                         if (errMSG.startsWith("?")) {

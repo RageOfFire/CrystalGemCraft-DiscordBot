@@ -13,6 +13,9 @@ module.exports = {
             "Quyền lợi Rank",
             hyperlink('⭐️ Quyền lợi','https://crystalgemcraft.gitbook.io/wiki/tong-quan/thong-tin-rank')
             )
-        message.reply({ embeds: [rankEmbed] }).catch((err) => {console.log(err)})
+        message.channel.send({ embeds: [rankEmbed] })
+        .then(msg => {
+            setTimeout(() => msg.delete(), 10000)
+        }).catch((err) => {console.log(err)})
     }
 }

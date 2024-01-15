@@ -15,6 +15,9 @@ module.exports = {
             "Các câu hỏi thường gặp",
             hyperlink('🕵️ Câu hỏi thường gặp','https://crystalgemcraft.gitbook.io/wiki/tong-quan/faq')
             )
-        message.reply({ embeds: [faqEmbed] }).catch((err) => {console.log(err)})
+        message.channel.send({ embeds: [faqEmbed] })
+        .then(msg => {
+            setTimeout(() => msg.delete(), 10000)
+        }).catch((err) => {console.log(err)})
     }
 }

@@ -10,6 +10,9 @@ module.exports = {
     ],
     run: async ({ client, message }) => {
         const linkEmbed = templateEmbed(client, message, "Hướng dẫn Link discord", link.join("").toString())
-        message.reply({ embeds: [linkEmbed] }).catch((err) => {console.log(err)})
+        message.channel.send({ embeds: [linkEmbed] })
+        .then(msg => {
+            setTimeout(() => msg.delete(), 10000)
+        }).catch((err) => {console.log(err)})
     }
 }

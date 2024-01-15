@@ -9,6 +9,9 @@ module.exports = {
     ],
     run: async ({ client, message }) => {
         const landEmbed = templateEmbed(client, message, "Hướng dẫn sở hữu đất riêng", lands.join("").toString())
-        message.reply({ embeds: [landEmbed] }).catch((err) => {console.log(err)})
+        message.channel.send({ embeds: [landEmbed] })
+        .then(msg => {
+            setTimeout(() => msg.delete(), 30000)
+        }).catch((err) => {console.log(err)})
     }
 }

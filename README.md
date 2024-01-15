@@ -48,6 +48,8 @@ npm i
 ```sh
 TOKEN=your-discord-bot-token
 OWNER=your-discord-id-optional
+BLACKLIST_CHANNEL=CHANNEL_ID_1, CHANNEL_ID_2, CHANNEL_ID_3 
+(A list of channel id that you don't want to send helper message)
 ```
 
 ### Run

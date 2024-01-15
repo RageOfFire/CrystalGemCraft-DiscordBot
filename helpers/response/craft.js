@@ -16,6 +16,9 @@ module.exports = {
             "Công thức chế tạo",
             hyperlink('🛠 Công thức chế tạo','https://crystalgemcraft.gitbook.io/wiki/craft/gioi-thieu')
             )
-            message.reply({ embeds: [craftEmbed] }).catch((err) => {console.log(err)})
+            message.channel.send({ embeds: [craftEmbed] })
+            .then(msg => {
+                setTimeout(() => msg.delete(), 10000)
+            }).catch((err) => {console.log(err)})
     }
 }

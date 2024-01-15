@@ -12,7 +12,8 @@ const client = new Discord.Client({
 let bot = {
     client,
     // prefix: process.env.PREFIX,
-    owner: [process.env.OWNER]
+    owner: [process.env.OWNER],
+    blacklist: process.env.BLACKLIST_CHANNEL?.trim().split(",")
 }
 
 client.events = new Discord.Collection()
